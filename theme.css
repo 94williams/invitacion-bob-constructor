@@ -27,3 +27,37 @@ h1,h2,h3{font-weight:700;letter-spacing:-1.5px}h2{font-size:clamp(34px,4.2vw,53p
 .js-motion .theme-decor.in-view span,.js-motion .theme-decor.in-view span:before,.js-motion .theme-decor.in-view span:after{animation-play-state:running!important}
 @media(max-width:700px){.theme-decor{opacity:.12}.cover-frame>.theme-decor{opacity:.28}.countdown-section>.theme-decor,.footer>.theme-decor{opacity:.2}}
 @media(prefers-reduced-motion:reduce){.theme-decor span,.theme-decor span:before,.theme-decor span:after,.cover-art{animation:none!important}.js-motion .text-reveal,.js-motion .text-sequence .text-part,.js-motion .reveal{opacity:1!important;transform:none!important;transition:none!important;animation:none!important}}
+
+/* Story, picture frames and section silhouettes. */
+.identity-card{position:relative;margin:0 0 32px;padding:22px 24px;text-align:left;max-width:430px;background:var(--paper);border:1px solid var(--theme-accent);box-shadow:0 8px 24px #17232f0a}
+.identity-card small{display:block;font:600 8px/1.6 var(--sans);letter-spacing:1.6px;color:var(--theme-accent)}
+.identity-card strong{display:block;font-size:25px;line-height:1.2;margin:9px 0;color:var(--forest)}
+.identity-card span,.identity-card p{display:block;font:500 11px/1.7 var(--sans);color:var(--muted)}
+.identity-card p{margin-top:9px}
+.portrait-arch img{filter:none;border-radius:inherit}.memory img{border:0;filter:none}
+.memory{padding:0;background:transparent;border:0}.memory span{padding:0 4px}.memory:nth-child(even){margin-top:32px}
+.album-photo{transform:none;padding:7px;box-shadow:none;background:var(--theme-accent)}
+.album-photo:before,.album-photo:after{display:none}
+.album-page{background:var(--paper);box-shadow:none;border:0}.photo-dialog .album-caption{transform:none;font-family:var(--sans);font-size:25px;font-weight:700}
+.photo-dialog::backdrop{background:#111a2de8}.photo-dialog{border:2px solid var(--theme-accent);border-radius:18px}
+.album-photo img{border-radius:5px}.rsvp-actions .button{white-space:normal;line-height:1.45}
+.story-copy>.identity-card~.eyebrow{margin-top:12px}
+@media(max-width:700px){.identity-card{margin:0 auto 32px;padding:20px}.identity-card strong{font-size:23px}.memory:nth-child(even){margin-top:28px}.photo-dialog .album-caption{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.site-machine,.site-machine *,.identity-card,.comic-sound,.text-visible .text-part{animation:none!important;transform:none!important}}
+.theme-bob .identity-card{border:2px dashed #c99730;border-radius:22px 22px 22px 5px;background:#fff7da}.theme-bob .identity-card strong{font-family:'Builder Display',var(--sans);font-weight:600;font-size:26px;color:#194b69}
+.theme-bob .portrait-arch{padding:8px;border:0;border-radius:46% 46% 20px 20px;background:repeating-linear-gradient(135deg,#f3bd35 0 15px,#194b69 15px 24px);box-shadow:0 8px 0 #c9973020}
+.theme-bob .portrait-arch img{border-radius:46% 46% 14px 14px}
+.theme-bob .memory img{border:6px solid #efbd3a;border-radius:28px 28px 10px 10px;outline:2px dashed #194b69;outline-offset:3px;box-shadow:0 8px 0 #194b6912}
+.theme-bob .memory:nth-child(even) img{border-color:#194b69;border-radius:10px 28px 10px 28px;outline-color:#d59f28}
+.theme-bob .album-photo{border-radius:20px;background:repeating-linear-gradient(135deg,#efbd3a 0 15px,#194b69 15px 24px);padding:8px}.theme-bob .album-photo img{border-radius:12px}
+.theme-bob .story{border-radius:100px 100px 25px 25px}.theme-bob .countdown-section{border-radius:50% 50% 8% 8%/40px 40px 20px 20px;padding-top:95px;padding-bottom:85px}.theme-bob .countdown-section:before,.theme-bob .countdown-section:after{display:none}
+.theme-bob .itinerary{border-radius:30px 85px 30px 85px;background:linear-gradient(#fff8eaee,#fff8eaee),repeating-linear-gradient(90deg,#194b69 0 1px,transparent 1px 25px)}
+.theme-bob .route-card{border-radius:32px 32px 12px 12px;border:2px solid #dab954}.theme-bob .route-card:nth-child(2){border-radius:12px 32px 12px 32px}.theme-bob .venue-section{border-radius:80px 15px 80px 15px}.theme-bob .details-section{border-radius:40px 100px 40px 100px}.theme-bob .rsvp-form{border-radius:30px 30px 12px 12px;border:2px solid #e4ba48;border-top:9px solid #efbd3a}
+.theme-bob .botanical-divider{height:50px;width:78%;max-width:700px;gap:14px}.theme-bob .botanical-divider span{height:7px;background:repeating-linear-gradient(135deg,#dcae35 0 8px,#194b69 8px 13px);opacity:.65}.theme-bob .botanical-divider b{font-family:'Builder Display';letter-spacing:1px;color:#194b69;font-size:10px}
+.work-cone{left:22px;bottom:30px;width:28px;height:38px;background:linear-gradient(180deg,#d97830 0 40%,#fff9e2 40% 53%,#d97830 53% 72%,#fff9e2 72% 82%,#d97830 82%);clip-path:polygon(43% 0,57% 0,84% 88%,100% 88%,100% 100%,0 100%,0 88%,16% 88%)}
+.work-helmet{right:35px;top:60px;width:45px;height:29px;border-radius:30px 30px 5px 5px;background:currentColor;border-bottom:5px solid #194b69}.work-helmet:before{content:'';position:absolute;left:20px;top:-3px;width:5px;height:25px;background:var(--paper);opacity:.6;border-radius:3px}
+.site-machine{position:relative;width:145px;height:95px;margin:-12px auto 35px;transform-origin:bottom center}
+.site-machine span{position:absolute;display:block}.machine-track{width:86px;height:18px;border:4px solid #194b69;border-radius:12px;bottom:0;left:7px;background:repeating-linear-gradient(90deg,#194b69 0 4px,#fff6d4 4px 9px)}.machine-body{width:75px;height:27px;background:#efbd3a;border-radius:10px 4px 4px 4px;bottom:17px;left:12px;border:2px solid #d5a12a}.machine-cab{width:40px;height:40px;bottom:43px;left:39px;border:6px solid #efbd3a;background:#91bbcb;border-radius:10px 10px 2px 2px}.machine-arm{height:10px;width:58px;background:#efbd3a;left:76px;top:18px;transform:rotate(28deg);transform-origin:left center;border:2px solid #d5a12a}.machine-bucket{height:29px;width:25px;background:#194b69;left:119px;top:40px;border-radius:2px 2px 12px 4px;transform:rotate(-18deg)}
+.theme-bob.js-motion .site-machine.visible{animation:machine-arrival 1.2s ease-out both}.theme-bob.js-motion .site-machine.visible .machine-arm{animation:machine-lift 1.4s ease-in-out both}
+@keyframes machine-arrival{from{opacity:0;transform:translateX(-55px)}to{opacity:1;transform:none}}@keyframes machine-lift{0%{transform:rotate(36deg)}50%{transform:rotate(16deg)}100%{transform:rotate(28deg)}}
+@media(max-width:700px){.theme-bob .story{border-radius:55px 55px 20px 20px}.theme-bob .countdown-section{padding-top:80px;padding-bottom:75px}.theme-bob .itinerary{border-radius:20px 45px 20px 45px}.theme-bob .venue-section{border-radius:45px 12px 45px 12px}.theme-bob .details-section{border-radius:25px 55px 25px 55px}.work-cone{width:22px;height:30px;left:12px}.work-helmet{width:33px;height:23px;right:18px;top:45px}.work-helmet:before{left:15px;height:20px}}
