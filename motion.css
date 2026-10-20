@@ -1,0 +1,54 @@
+/* Motion direction: parts arrive, blocks settle and the excavator does one lift. */
+@media(prefers-reduced-motion:no-preference){
+body.experience.theme-bob.js-motion .reveal,
+body.experience.theme-bob.js-motion .text-reveal,
+body.experience.theme-bob.js-motion .text-sequence .text-part{transition:none;animation:none;transform:none;filter:none}
+body.experience.theme-bob.js-motion .reveal:not(.visible){opacity:0;transform:none}
+body.experience.theme-bob.js-motion .reveal.visible{opacity:1;transform:none;animation:bob-piece-fit 750ms cubic-bezier(.2,.8,.25,1) var(--motion-delay,0ms) backwards}
+body.experience.theme-bob.js-motion .section-heading.reveal.visible,
+body.experience.theme-bob.js-motion .story-copy.reveal.visible,
+body.experience.theme-bob.js-motion .rsvp-heading.reveal.visible{animation-name:bob-board-mount;animation-duration:650ms}
+body.experience.theme-bob.js-motion .route-card.reveal.visible{animation-name:bob-plan-slide;animation-duration:600ms}
+body.experience.theme-bob.js-motion .route-card.visible .route-image{animation:bob-step-block 820ms cubic-bezier(.2,.8,.3,1) var(--motion-delay,0ms) backwards;--build-tilt:-4deg}
+body.experience.theme-bob.js-motion .route-card:nth-child(2){--motion-delay:140ms}
+body.experience.theme-bob.js-motion .route-card:nth-child(2) .route-image{--build-tilt:4deg}
+body.experience.theme-bob.js-motion .route-card:nth-child(3){--motion-delay:280ms}
+body.experience.theme-bob.js-motion .memory.reveal.visible{animation-name:bob-memory-stack;animation-duration:880ms;transform-origin:50% 100%}
+body.experience.theme-bob.js-motion .memory:nth-child(even){--build-lean:4deg;--motion-delay:140ms}
+body.experience.theme-bob.js-motion .memory:nth-child(3){--motion-delay:200ms}
+body.experience.theme-bob.js-motion .memory:nth-child(5){--motion-delay:260ms}
+body.experience.theme-bob.js-motion .text-reveal:not(.text-visible),
+body.experience.theme-bob.js-motion .text-sequence:not(.text-visible) .text-part{opacity:0;transform:none}
+body.experience.theme-bob.js-motion .text-reveal.text-visible,
+body.experience.theme-bob.js-motion .text-sequence.text-visible .text-part{opacity:1;transform:none;animation:bob-label-print 620ms steps(14,end) var(--text-delay,0ms) backwards}
+body.experience.theme-bob.js-motion .text-sequence.text-visible em.text-part{animation-delay:160ms}
+body.experience.theme-bob.js-motion .cover h1.text-visible{animation:bob-sign-drop 950ms cubic-bezier(.2,.8,.3,1) 80ms backwards;transform-origin:50% 0}
+body.experience.theme-bob.js-motion .cover-art{animation:bob-scene-build 1300ms cubic-bezier(.2,.8,.3,1) 250ms backwards!important}
+body.experience.theme-bob.js-motion .countdown-inner.visible .countdown>div{animation:bob-counter-fit 720ms cubic-bezier(.2,.8,.3,1) backwards}
+body.experience.theme-bob.js-motion .countdown-inner.visible .countdown>div:nth-child(2){animation-delay:100ms}
+body.experience.theme-bob.js-motion .countdown-inner.visible .countdown>div:nth-child(3){animation-delay:200ms}
+body.experience.theme-bob.js-motion .countdown-inner.visible .countdown>div:nth-child(4){animation-delay:300ms}
+body.experience.theme-bob.js-motion .site-machine.visible{animation:bob-machine-drive 1600ms cubic-bezier(.2,.7,.3,1) backwards}
+body.experience.theme-bob.js-motion .site-machine.visible .machine-track{animation:bob-track-roll 1600ms linear backwards}
+body.experience.theme-bob.js-motion .site-machine.visible .machine-body{animation:bob-chassis-settle 1600ms ease-out backwards}
+body.experience.theme-bob.js-motion .site-machine.visible .machine-arm{animation:bob-hydraulic-lift 1800ms ease-in-out 500ms backwards;transform-origin:left center}
+body.experience.theme-bob.js-motion .site-machine.visible .machine-bucket{animation:bob-bucket-tip 1800ms ease-in-out 500ms backwards;transform-origin:top left}
+body.experience.theme-bob .button:after{display:none}
+@media(hover:hover){body.experience.theme-bob .button:hover{transform:translateY(-3px);box-shadow:0 5px 0 #143b4b35;transition:transform 180ms,box-shadow 180ms}}
+body.experience.theme-bob .button:active{transform:translateY(2px);box-shadow:none}
+body.experience.theme-bob.js-motion .reveal:focus-within{animation:none!important;opacity:1!important;clip-path:none!important;transform:none!important}
+@keyframes bob-piece-fit{0%{opacity:0;transform:translateY(-23px) rotate(-2deg)}20%{opacity:1}70%{transform:translateY(3px) rotate(.5deg)}100%{opacity:1;transform:none}}
+@keyframes bob-board-mount{0%{opacity:0;transform:rotate(-3deg) scale(.96)}20%{opacity:1}70%{transform:rotate(.8deg) scale(1.01)}100%{opacity:1;transform:none}}
+@keyframes bob-plan-slide{0%{opacity:0;transform:translateX(-20px)}20%{opacity:1}80%{transform:translateX(2px)}100%{opacity:1;transform:none}}
+@keyframes bob-step-block{0%{opacity:0;transform:translateY(-22px) rotate(-12deg) scale(.9)}20%{opacity:1}65%{transform:translateY(4px) rotate(3deg) scale(1.02)}100%{opacity:1;transform:rotate(var(--build-tilt,-4deg))}}
+@keyframes bob-memory-stack{0%{opacity:0;transform:translateY(-30px) rotate(var(--build-lean,-4deg))}20%{opacity:1}62%{transform:translateY(4px) rotate(1deg)}82%{transform:translateY(-2px) rotate(-.5deg)}100%{opacity:1;transform:none}}
+@keyframes bob-label-print{0%{opacity:1;clip-path:inset(0 100% 0 0)}100%{opacity:1;clip-path:inset(0)}}
+@keyframes bob-sign-drop{0%{opacity:0;transform:translateY(-20px) rotate(-5deg)}15%{opacity:1}60%{transform:translateY(3px) rotate(1.5deg)}80%{transform:rotate(-.5deg)}100%{opacity:1;transform:none}}
+@keyframes bob-scene-build{from{clip-path:inset(100% 0 0 0);transform:translateY(12px)}to{clip-path:inset(0);transform:none}}
+@keyframes bob-counter-fit{0%{opacity:0;transform:translateY(-18px) rotate(-7deg)}20%{opacity:1}65%{transform:translateY(3px) rotate(1deg)}100%{opacity:1;transform:none}}
+@keyframes bob-machine-drive{0%{opacity:0;transform:translateX(-75px)}15%{opacity:1}70%{transform:translateX(3px)}100%{opacity:1;transform:none}}
+@keyframes bob-track-roll{from{background-position:0 0}to{background-position:54px 0}}
+@keyframes bob-chassis-settle{0%,24%,46%{transform:translateY(0)}12%,35%{transform:translateY(-1.5px)}65%,100%{transform:none}}
+@keyframes bob-hydraulic-lift{0%{transform:rotate(28deg)}45%{transform:rotate(4deg)}65%{transform:rotate(4deg)}100%{transform:rotate(28deg)}}
+@keyframes bob-bucket-tip{0%{transform:rotate(-18deg)}45%{transform:rotate(-40deg)}65%{transform:rotate(-55deg)}100%{transform:rotate(-18deg)}}
+}
