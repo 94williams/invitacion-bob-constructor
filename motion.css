@@ -50,5 +50,5 @@ body.experience.theme-bob.js-motion .reveal:focus-within{animation:none!importan
 @keyframes bob-track-roll{from{background-position:0 0}to{background-position:54px 0}}
 @keyframes bob-chassis-settle{0%,24%,46%{transform:translateY(0)}12%,35%{transform:translateY(-1.5px)}65%,100%{transform:none}}
 @keyframes bob-hydraulic-lift{0%{transform:rotate(28deg)}45%{transform:rotate(4deg)}65%{transform:rotate(4deg)}100%{transform:rotate(28deg)}}
-@keyframes bob-bucket-tip{0%{transform:rotate(-18deg)}45%{transform:rotate(-40deg)}65%{transform:rotate(-55deg)}100%{transform:rotate(-18deg)}}
+@keyframes bob-bucket-tip{0%{transform:rotate(-18deg)}45%{transform:translate(7px,-23px) rotate(-40deg)}65%{transform:translate(7px,-23px) rotate(-55deg)}100%{transform:rotate(-18deg)}}
 }
